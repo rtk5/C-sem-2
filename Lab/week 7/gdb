@@ -1,0 +1,73 @@
+(base) student@student-OptiPlex-5090:~$ gcc practice.c
+(base) student@student-OptiPlex-5090:~$ ./a.out
+enter the number:56
+the sum of factors of 56 is 64
+(base) student@student-OptiPlex-5090:~$ gcc -g -c practice.c
+(base) student@student-OptiPlex-5090:~$ gcc practice.o -o 5.exe
+(base) student@student-OptiPlex-5090:~$ gdb
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) target exec 5.exe
+(gdb) file 5.exe
+Reading symbols from 5.exe...
+(gdb) list
+1	#include <stdio.h>
+2	
+3	int sof(int num);
+4	int main(){
+5	int num,sum;
+6	printf("enter the number:");
+7	scanf("%d",&num);
+8	sum = sof(num);
+9	printf("the sum of factors of %d is %d\n",num,sum);
+10	
+(gdb) list
+11	return 0;
+12	}
+13	
+14	int sof(int num){
+15	int a=0;
+16	int i;
+17	for(i=1;i<num;i++){
+18	if(num%i==0){
+19	a=a+i;
+20	}
+(gdb) list
+21	}
+22	return a;
+23	}
+(gdb) break 5
+Breakpoint 1 at 0x11a4: file practice.c, line 6.
+(gdb) break 10
+Breakpoint 2 at 0x11f3: file practice.c, line 11.
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000000011a4 in main at practice.c:6
+2       breakpoint     keep y   0x00000000000011f3 in main at practice.c:11
+(gdb) delete 1
+(gdb) info b
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x00000000000011f3 in main at practice.c:11
+(gdb) p 2+3
+$1 = 5
+(gdb) p 3==3
+$2 = 1
+(gdb) p 3==2
+$3 = 0
+(gdb) delete 2
+(gdb) info b
+No breakpoints or watchpoints.
+(gdb) quit
