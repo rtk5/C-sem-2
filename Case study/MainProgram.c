@@ -30,7 +30,7 @@ void reserveRoom(struct Room rooms[], int numRooms, int roomNumber, const char *
     // Check if the room is already occupied
     if (rooms[roomNumber - 1].occupancyStatus) {
         printf("Room %d is already occupied.\n", roomNumber);
-    } else {
+    } else {    
         // Update room details upon successful reservation
         rooms[roomNumber - 1].occupancyStatus = 1;
         strcpy(rooms[roomNumber - 1].guestName, guestName);
