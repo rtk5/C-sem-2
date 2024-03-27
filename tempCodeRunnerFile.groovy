@@ -1,14 +1,12 @@
 #include <stdio.h>
 
-// Define a structure Room
-struct Room {
+
     int roomNumber;
     char guestName[50];
     int occupancyStatus; // 0 for vacant, 1 for occupied
-};
 
 // Function to initialize all rooms with default values
-void initializeRooms(struct Room rooms[], int numRooms) {
+void initializeRooms(int numRooms) {
     for (int i = 0; i < numRooms; i++) {
         rooms[i].roomNumber = i + 1;
         rooms[i].guestName[0] = '\0'; // Empty string for guest name
@@ -17,7 +15,7 @@ void initializeRooms(struct Room rooms[], int numRooms) {
 }
 
 // Function to display the current status of all hotel rooms
-void displayRooms(struct Room rooms[], int numRooms) {
+void displayRooms(int numRooms) {
     printf("Room Number\tGuest Name\tOccupancy Status\n");
     for (int i = 0; i < numRooms; i++) {
         printf("%d\t\t%s\t\t%s\n", rooms[i].roomNumber, rooms[i].guestName,
@@ -26,7 +24,7 @@ void displayRooms(struct Room rooms[], int numRooms) {
 }
 
 // Function to reserve a room
-void reserveRoom(struct Room rooms[], int numRooms, int roomNumber, const char *guestName) {
+void reserveRoom(int numRooms, int roomNumber, const char *guestName) {
     // Check if the room is already occupied
     if (rooms[roomNumber - 1].occupancyStatus) {
         printf("Room %d is already occupied.\n", roomNumber);
@@ -39,7 +37,7 @@ void reserveRoom(struct Room rooms[], int numRooms, int roomNumber, const char *
 }
 
 // Function to check out a room
-void checkoutRoom(struct Room rooms[], int numRooms, int roomNumber) {
+void checkoutRoom(int numRooms, int roomNumber) {
     // Check if the room is already vacant
     if (!rooms[roomNumber - 1].occupancyStatus) {
         printf("Room %d is already vacant.\n", roomNumber);
@@ -52,9 +50,7 @@ void checkoutRoom(struct Room rooms[], int numRooms, int roomNumber) {
 }
 
 int main() {
-    // Define array of Room structures to represent hotel rooms
-    struct Room hotelRooms[10]; // Assuming 10 rooms in the hotel
-
+  
     // Initialize hotel rooms with default values
     initializeRooms(hotelRooms, 10);
 
@@ -62,7 +58,7 @@ int main() {
     displayRooms(hotelRooms, 10);
 
     // Reserve room example
-    reserveRoom(hotelRooms, 10, 2, "Mike");
+    reserveRoom(hotelRooms, 10, 2, "John Doe");
 
     // Check out room example
     checkoutRoom(hotelRooms, 10, 2);
