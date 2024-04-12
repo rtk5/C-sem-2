@@ -11,6 +11,8 @@ struct student {
 int main() {
 
     struct student s1 = {10, "xyz", 40};
+    struct student s3={.rollno=12,.name="ss",.mark=10};       //designated intialization
+    struct student s4={rollno:12,name:"sss",mark:10};       //also designated initializtion
     struct student s2;
     printf("Display\n");
     printf("%d\n", s1.rollno);
