@@ -26,8 +26,8 @@ int main() {
     for(int i = 0; i < 2; i++) {
         printf("ID: %d\n", p[i].id);
         printf("Name: %s\n", p[i].name);
-        printf("Mark 1: %d\n", p[i].m1);
-        printf("Mark 2: %d\n", p[i].m2);
+        printf("Mark 1: %d\n",(p+i)->m1);
+        printf("Mark 2: %d\n",(p+i)->m2);
         printf("Mark 3: %d\n", p[i].m3);
         printf("TOTAL: %d\n", p[i].total);
     }
