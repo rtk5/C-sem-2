@@ -1,7 +1,7 @@
 #include<stdio.h>
 struct s {
     unsigned int b:1;
-    int x:3;
+    int x:7;
 }s1;
 
 int main() {
@@ -14,3 +14,9 @@ int main() {
     return 0;
 
 }
+
+/*
+The sizeof = 4
+The value = 1
+The value = 7
+*/
