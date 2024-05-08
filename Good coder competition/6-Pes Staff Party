@@ -1,0 +1,51 @@
+There are n employees in Pes University.
+
+The first employee is the head of the College, and he does not have any superiors. Every other employee i has exactly one direct superior say Si.
+
+Employee x is considered to be a superior (direct or indirect) of employee y if one of the following conditions holds:
+
+• employee x is the direct superior of employee y;
+
+• employee x is a superior of the direct superior of employee y. (transitive relation)
+
+Head of college is Supervisor of every employee.
+
+We want a competition to be held between employees. Two-person teams should be created for this purpose. However, if one employee in a team is the superior of another, they are uncomfortable together. So, teams of two people should be created so that no one is the superior of the other. Note that no employee can participate in more than one team.
+
+Your need to find the maximum possible number of teams according to the aforementioned rules.
+
+Input Format
+
+The first line of each test case contains a single integer n — the number of employees.
+
+The second line contains n−1 integers S2,S3,S4…..Sn where Si is the index of the direct superior of the i-th employee
+
+Constraints
+
+(2 <= n <= 2*10^5)
+
+Output Format
+
+For each test case, print a single integer — the maximum possible number of teams according to the aforementioned rules.
+
+Sample Input 0
+
+4
+1 2 1
+Sample Output 0
+
+1
+Explanation 0
+
+team (3,4) can be created.
+
+Sample Input 1
+
+5
+5 5 5 1
+Sample Output 1
+
+1
+Explanation 1
+
+team (2,3) can be created

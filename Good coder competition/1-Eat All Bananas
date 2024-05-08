@@ -1,0 +1,38 @@
+You have N bananas , each minute you eat some bananas , starting from K bananas in 1st minute , each minute you eat 1 more than previous minute .ie K,K+1,K+2 ...
+
+You need to find total minutes to eat all bananas.
+
+Input Format
+
+2 space separated integers : N K
+
+Constraints
+
+1 <= N <= 10^18
+
+1 <= K <= N
+
+Output Format
+
+Total Minutes Needed
+
+Explanation for Sample:
+
+N = 10 , K = 2
+
+1st minute : 10-2 = 8
+
+2nd minute : 8-3 = 5
+
+3rd minute : 5-4 = 1
+
+4th minute : 1-5 = 0(finished)
+
+Answer : 4
+
+Sample Input 0
+
+10 2
+Sample Output 0
+
+4

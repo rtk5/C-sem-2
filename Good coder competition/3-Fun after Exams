@@ -1,0 +1,62 @@
+After ESA holidays are coming up. They are going to last for n days.
+
+During the holidays, Rohan wants to try all of these activities exactly once with his friends:
+
+1.) go to swimmig pool
+
+2.) watch a movie
+
+3.) play COD
+
+Rohan knows that, on the i -th day, exactly
+
+Ai friends will join him for swimmig,
+
+Bi friends will join him for a movie
+
+Ci friends will join him for COD.
+
+Rohan also knows that he can't try more than one activity in a single day.
+
+Thus, he asks you to help him choose three distinct days p,q,r in such a way that the total number of friends to join him for the activities (Ap+Bq+Cr ) is maximized.
+
+Input Format
+
+The first line of each testcase contains a single integer n — the duration of the holidays in days.
+
+The second line contains n integers A1,A2,…,An — the number of friends that will join Rohan for swimming on the i -th day.
+
+The third line contains n integers B1,B2,…,Bn — the number of friends that will join Rohan for a movie on the i -th day.
+
+The fourth line contains n integers C1,C2,…,Cn — the number of friends that will join Rohan for COD on the i -th day.
+
+Constraints
+
+1 <= n <= 10^5
+
+1 <= Ai , Bi , Ci <= 10^8
+
+Output Format
+
+the maximum total number of friends that can join Rohan for the activities on three distinct days.
+
+Sample Input 0
+
+3
+1 10 1
+10 1 1
+1 1 10
+Sample Output 0
+
+30
+Explanation 0
+
+Rohan can choose day 2 for swimming, day 1 for a movie and day 3 for COD. This way,
+
+A2=10 friends will join him for swimming,
+
+B1=10 friends will join him for a movie and
+
+C3=10 friends will join him for COD.
+
+The total number of friends is 30 .

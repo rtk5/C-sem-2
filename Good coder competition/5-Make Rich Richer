@@ -1,0 +1,53 @@
+You have k units of money and you want to distribute it to some people to make them rich. You are given an array of integers A of length N representing current money ith person has .
+
+In one operation you:
+
+1.) Choose an index i such that 0 ≤ i < n−1 and Ai ≤ Ai+1 ie Next person must be atleast as rich as current .
+
+2.) Increase Ai by 1 .
+
+Find the maximum possible value of max(A1,A2,…An) ie Maximum value of Max_element of array or how rich can be the richest person that you can get after performing this operation at most k times.
+
+Input Format
+
+Space Separated integers N K
+
+Array N elements
+
+Constraints
+
+2 <= N <= 1000
+
+1 <= K <= 10^8
+
+1 <= A[i] <= 10^8
+
+Output Format
+
+the maximum possible maximum of the array after performing at most k operations.
+
+Sample Input 0
+
+3 4
+1 3 3
+Sample Output 0
+
+4
+Explanation 0
+
+One possible optimal sequence of operations is: [1,3,3]→[2,3,3]→[2,4,3]→[3,4,3]→[4,4,3]
+
+Max value achieved is : 4
+
+Sample Input 1
+
+5 6
+1 3 4 5 1
+Sample Output 1
+
+7
+Explanation 1
+
+One possible optimal sequence of operations is: [1,3,4,5,1]→[1,4,4,5,1]→[1,5,4,5,1]→[1,5,5,5,1]→[1,5,6,5,1]→[1,6,6,5,1]→[1,7,6,5,1]
+
+Max value : 7

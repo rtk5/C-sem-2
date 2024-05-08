@@ -1,0 +1,34 @@
+I am very passionate about numbers and my Favourite number is K. K is in the range [2,5] both inclusive . Now let's say you are given an array of n numbers and what I want is to make the product of all the numbers of array to be divisible by K.
+
+You can apply the given operation on any number of array :
+
+Opr : Choose an index i (0 <= i < n) and Increment the value of that index by 1. i.e. make arr[i] = arr[i] + 1
+
+You need to find minimum number of opertions needed to fulfil the requirement.
+
+Input Format
+
+First line has N , K (Size of array and Favourite Number)
+
+Next line contains N array elements
+
+Constraints
+
+2 <= N <= 10^5
+
+2 <= K <= 5
+
+Output Format
+
+Minimum number of operations needed.
+
+Sample Input 0
+
+2 5
+3 7
+Sample Output 0
+
+2
+Explanation 0
+
+In the first test case, we need to choose the index i=0 twice. After that, the array will be a=[5,7] . The product of all the numbers in the array is now 35 which is divisible by 5 .
