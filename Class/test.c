@@ -1,10 +1,14 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+
 int main() {
-    char ch[]="This is a test";
-    printf("Present at %p\n",strchr(ch,'t'));
-    char *pos=strchr(ch,'t');
-    int p = pos -ch;
-    if(pos)
-        printf("Char at pos %d\n",p);
+    int a[][2] = {
+        {3, 5},
+        {6, 7},
+        {8, 1},
+        {99, 66},
+        {33, 15},
+        {36} // This initializes the last element as 36, and the second element is implicitly set as 0
+    };
+
+    printf("%d", a[1][2]); // This line attempts to print a[1][2]
 }
